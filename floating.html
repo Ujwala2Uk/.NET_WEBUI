@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online training Website</title>
+    <style>
+        .main{
+            width:100%;
+            float: center;
+        }
+
+        .header{
+            background-color: rgb(38, 35, 176);
+           
+            color : rgb(233, 227, 227);
+            padding: 1px;
+            text-align:center;
+            
+            
+        }
+        
+        .left{
+            width: 20%;
+            height:400px;
+            background-color: aquamarine;
+            border: 2px solid darkcyan;
+            float: left;
+        }
+
+        .right{
+            width: 20%;
+            height:400px;
+            background-color:blanchedalmond;
+            border: 2px solid darkgoldenrod;
+            float:left;
+        }
+
+        .center{
+            width: 59%;
+            height:400px;
+            background-image:url(img/bg1.jpg);
+            background-attachment: static;
+            background-size: cover;
+            border: 2px solid black;
+            float: left;
+        }
+
+        .footer{
+            background-color:rgb(220, 201, 237);
+            border: 1px solid purple;
+            color : blue;
+            padding: 20px;
+            text-align:center;
+            height: 500px;
+        }
+
+        .vertical{
+            list-style-type : none;
+            margin-top: 50px;
+            padding: 10px;
+            position: static;
+            overflow: auto;
+            height: 40%;
+            margin: 0%;
+            width: 250px;
+        }
+
+        .navigation{
+            display: black;
+            color: blue;
+            text-align: left;
+            text-shadow:5px ;
+        }
+
+        .navigation:hover{
+            background-color: palevioletred;
+        }
+        .login{
+            background-color: blue;
+            border:20px;
+            margin: 10px;
+
+        }
+        .position{
+            float: right;
+            text-align: center;
+            width:100px;
+            height: 50px;
+            border:10px ;
+            border-color:black;
+            background-color: aliceblue;
+            border-radius: 10px 10px;
+            border-width: 5px 5px;
+            box-shadow: 15px 15px 5px rgb(126, 32, 48);
+            padding: 10px 20px;
+        }
+          /*Pseudo elements*/
+        p::first-letter{
+            color: rgb(10, 17, 24);
+            font-weight: bolder;
+            font-size: 30px;
+        }
+        p::selection{
+            color: beige;
+        }
+        .image{
+            height: 50px;
+            width: 70px;
+            border-radius: 5px;
+            position: relative;
+            animation-name: ani;
+            animation-duration: 5s;
+            animation-timing-function: linear; 
+            animation-delay: 2s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            text-align: center;
+           
+        }
+        /* #visiting{
+            float: right;
+            width:100px;
+            height: 50px;
+            border:10px 10px ;
+            border-color: azure;
+            background-color: rgb(15, 21, 105);
+
+        } */
+        /* Animation in CSS*/
+        @keyframes ani{
+            0%{background-color: rgb(98, 0, 255) ;left: 0px; right:0px}
+            30%{background-color: rgb(0, 255, 81) ;left: 30px; right:30px}
+            60%{background-color: rgb(255, 0, 102) ;left: 60px; right:60px}
+            100%{background-color: rgb(191, 255, 0) ;left: 100px; right:100px}
+        }
+        .image1{
+            height: 50px;
+            width: 100px;
+            border-radius: 5px;
+            position: relative;
+            animation-name: ani1;
+            animation-duration: 5s;
+            animation-timing-function: linear; 
+            animation-delay: 2s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            text-align: center;
+           
+        }
+        @keyframes ani1{
+            0%{background-color: rgb(213, 197, 239) ;right: 0px; left:0px}
+            30%{background-color: rgb(176, 239, 196) ;right: 30px; left :30px}
+            60%{background-color: rgb(250, 194, 216) ;right: 60px; left:60px}
+            100%{background-color: rgb(228, 240, 192) ;right: 100px; left:100px}
+        }
+        .image2{
+            height: 50px;
+            width: 100px;
+            border-radius: 5px;
+            position: relative;
+            animation-name: ani2;
+            animation-duration: 5s;
+            animation-timing-function: linear; 
+            animation-delay: 2s;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            text-align: center;
+           
+        }
+        @keyframes ani2{
+            0%{background-color:  rgb(197, 237, 76) ;left: 0px; right:0px}
+            30%{background-color: rgb(247, 72, 142) ;left: 30px; right:30px}
+            60%{background-color: rgb(69, 234, 121) ;left: 60px; right:60px}
+            100%{background-color:rgb(131, 58, 248) ;left: 100px; right:100px}
+        }
+          /* transition */
+        .transition{
+            width:100px;
+            height:100px;
+            transition: width 2s,height 2s, transform 1s;
+            text-align-last: right;
+        }
+        .transition:hover{
+            width:300px;
+            height:200px;
+            size: 500px;
+        }
+          /* Media queries*/
+        @media screen and (max-width:1030px) {
+            div.right{
+            width: 19%;
+            height:400px;
+            background-color: aquamarine;
+            border: 2px solid darkcyan;
+            float: left; 
+            }
+            iframe{
+                height: 150px;
+                width: 150px;
+            }
+           
+        }
+        @media screen and (max-width:950px) {
+            
+            iframe{
+                height: 100px;
+                width: 100px;
+            }
+            .image2{
+              display: none; 
+            }
+        }
+        @media screen and (max-width:800px) {
+            div.right{
+            width: 17%;
+            height:400px;
+            background-color: aquamarine;
+            border: 2px solid darkcyan;
+            float: left; 
+            }
+            li a.navigation{
+            text-align: left;
+            padding: 5px 5px;
+            font-size: 10px;
+        }
+        }
+        
+        @media screen and (max-width:640px) {
+            div.right{
+            width: 15%;
+            height:400px;
+            background-color: aquamarine;
+            border: 2px solid darkcyan;
+            float: left; 
+            }
+            iframe{
+                height: 150px;
+                width: 150px;
+            }
+            img.transition{
+                display: none;
+            }
+            input{
+                display: none;
+            }
+            iframe{
+                display: none;
+            }
+            h2{
+                display: none;
+            }
+            .ul_cont{
+                display: none;
+            }
+            .image1{
+                display: none;
+            }
+
+        }
+        @media screen and (max-width:560px) {
+            li a.navigation{
+            text-align: left;
+            padding: 5px 5px;
+            font-size: 5px;
+        }
+        .image{
+                display: none;
+            }
+        }
+        @media screen and (max-width:500px) {
+            p{
+                font-size:10px ;
+            }
+        
+        }
+
+    </style>
+</head>
+<body>
+    <a class="position" href="Logout.html">Logout</a>
+    <a id="visiting"class="position" href="Login.html">Login</a>
+	<a class="position" href="Registration.html">Registration</a>
+    
+    
+    <div class="main">
+    
+        <div class="header">
+            <h1 style="border:20px;">Online training</h1>
+            
+        </div>
+        <div>
+            <div class="left">
+                <ul class="vertical">HTML
+                    <li><a id="visiting" class="navigation" href="Website.html">Html Basics</a></li>
+                    <li><a id="visiting" class="navigation" href="">Html documtents</a></li>
+                    <li><a id="visiting" class="navigation" href="">Html Lists</a></li>
+                    <li><a id="visiting" class="navigation" href="">Html tables</a></li>
+                    <li><a id="visiting" class="navigation" href="">Styling properties</a></li>
+                    <li><a id="visiting" class="navigation" href="">Forms</a></li>
+                    <li><a id="visiting" class="navigation" href="">Transition of image</a></li>
+                </ul><hr>
+                <ul class="vertical">CSS
+                    <li><a id="visiting" class="navigation" href="style.css">CSS selectors</a></li>
+                    <li><a id="visiting" class="navigation" href="">CSS style sheets</a></li>
+                    <li><a id="visiting" class="navigation" href="">links</a></li>
+                    <li><a id="visiting" class="navigation" href="">Float property</a></li>
+                    <li><a id="visiting" class="navigation" href="">Pseudo elements</a></li>
+                    <li><a id="visiting" class="navigation" href="">Float property</a></li>
+                    <li><a id="visiting" class="navigation" href="">Animation using CSS</a></li>
+                </ul>
+            </div>
+            <div class="center">
+                
+                <p><img src="img/pg2.png" alt="'html" height="150px" width="200px" style="float:left">The goal for EVERY online training course is to improve employee performance and build the essential skills. Unfortunately, many corporate eLearning programs miss the mark by concentrating on online assessment scores, unlocking badges, and other extraneous milestones. The simple truth is that these are all means to an end which translates to measurable results that help your organization succeed. The purpose of your online training is to equip employees with the tools, resources, and information they need to be more productive in the workplace.</p>
+                <img class="transition" src="img/bg3.jpg" height="100px" width="100px" alt="CSS" style="float:right;" >
+                <div class="image">
+                     Join our course
+                </div><br>
+                
+                <div class="image1">
+                    Registration now for free
+               </div><br>
+               <div class="image2">
+                    All courses available
+                </div><br>
+            
+            </div>
+            
+            <div class="right">
+                <iframe width="200px" height="200px" style="margin-left:20px;margin-top:10px" src="https://youtube.com/embed/uMV9Qy_RUAI"></iframe><hr>
+                <h2 style="text-align: left;">Contacts</h2>
+                <ul style="text-align:left"class="ul_cont">
+                    <li>1234567890</li>
+                    <li>2314564268</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer">
+            <p> If u want to know more about our taining please go through the below website</p>
+            <h3>&copy;www.uthkalatrainingcenter.com </h3>
+            
+        </div>
+    </div>
+</body>
+</html>

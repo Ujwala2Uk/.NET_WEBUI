@@ -1,0 +1,29 @@
+p{
+    color:black;
+    font-size:larger;
+    background-color: bisque;
+}
+
+
+#exp{
+    color:rgb(161, 161, 204);
+    background-color:aqua;
+}
+
+.exp1{
+    color:rgb(17, 17, 71);
+    background-color:rgb(147, 190, 190); 
+}
+h1{
+    color:red;
+    background-color:pink; 
+}
+h2,h3{
+    font-style: italic;
+    background-color: rgb(116, 72, 72);
+}
+
+*{
+    background-color: rgb(156, 245, 217);
+}
+
