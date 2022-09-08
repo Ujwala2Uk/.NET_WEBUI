@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse and Sum</title>
+</head>
+<body>
+    <script>
+        document.write("Number=");
+        var num=1234;
+        var a=num.toString();
+        document.write(a);
+        document.write("<br>");
+        var b=[];
+        for(let i of a){
+            b.push(i);
+        }
+        var rev=b.reverse();
+        var s = rev.join('');
+        document.write("Revered Number=");
+        document.write(s);
+        document.write("<br>");   
+        document.write("Sum of the Number=");
+        for (sum=0;num>0; num = Math.floor(num / 10)){
+                sum += num % 10;
+        }
+        document.write(sum); 
+        
+     
+
+    </script>
+</body>
+</html>

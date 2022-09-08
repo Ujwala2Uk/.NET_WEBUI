@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks</title>
+</head>
+<body>
+    <script>
+        var maths= 48;
+        var social= 65;
+        var kannada= 56;
+        var english= 45;
+        var hindi= 50;
+        var total=(maths+social+kannada+english+hindi);
+        document.write("Total marks of the student " + total);
+        document.write("<br>");
+        var per= (total/500)*100;
+        document.write("Percentage " + per.toFixed(2)+"%");
+        document.write("<br>");  
+        if (per>80){
+            document.write("Grade is A");
+        }
+        else if (per>60 && per<=80){
+            document.write("Grade is B");  
+        }
+        else if (per>45 && per<=60){
+            document.write("Grade is C");  
+        }
+        else{
+            document.write("Fail"); 
+        }
+    </script>
+</body>
+</html>
