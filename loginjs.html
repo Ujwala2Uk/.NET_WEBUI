@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+    .reg{
+        margin-right:900px;
+        background-color: rgb(242, 183, 220);
+        color:black;
+        border-radius: 15px;
+        border-color: rgb(22, 20, 20);
+        box-shadow: 10px 20px 5px rgb(114, 74, 235);
+      } 
+    </style>
+</head>
+<body>
+    <h1>Login </h1>
+    <form id="demo">
+        <fieldset class="reg">
+            <legend style="color:rgb(18, 13, 27)">Login Details</legend>
+            <label>Enter the valid Username</label><br>
+            <input type="text"  value="" id="t1" required ><br>
+            <label>Enter the valid Password</label><br>
+            <input type="password" value="" id="t2" required></span><br><br>
+            <input type="submit" value="Login" onclick="processData(this.form)" />
+            </fieldset> 
+    </form>
+    <script>
+        class login{
+            display(){
+                return "Login Successfully";
+            }     
+        }
+        function processData(form){
+            var data1= document.getElementById("t1").value;
+            var data2 = document.getElementById("t2").value;
+            var s;
+            if(data1=="Ujwala" && data2=="Uthkala"){
+                s= new login();
+            }else{
+                alert("Invalid Username/password")
+            }
+            msg = s.display();
+            document.write(msg);  
+        }
+    </script>
+</body>
+</html>

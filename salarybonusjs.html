@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary Bonus</title>
+</head>
+<body>
+    <script>
+       
+        class company
+        {
+           constructor(salary, dep ) 
+           {
+            this.s=salary
+            this.d=dep;
+            document.write ("Bonus for the "+this.d+" employee is "); 
+           }
+            
+           bonus( ){
+            if(this.d=="IT"||this.d=="It"||this.d=="it"){
+                
+                document.write("Rs=" + this.s*0.5+" /-");
+            }
+            else if(this.d=="Testing"||this.d=="testing"){
+                document.write("Rs=" +this.s*0.45+" /-");
+            }
+            else if(this.d=="Admin"||this.d=="admin"){
+                document.write("Rs=" +this.s*0.3+" /-");
+            }
+            else if(this.d=="Other"||this.d=="other"){
+                document.write("Rs=" +this.s*0.2+" /-");
+            }
+            else{
+                document.write("can't calculate, Please enter the correct Department")
+            }
+           }
+        }
+        //Enter the salary and department(IT/Testing/Admin/Others )
+        var t= new company(45000,"xyz");
+        t.bonus( );
+    </script>
+</body>
+</html>
