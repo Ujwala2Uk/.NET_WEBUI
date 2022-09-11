@@ -8,26 +8,154 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/e4b12cce1e.js" crossorigin="anonymous"></script>
+    <style>
+      body{
+        background-color: rgb(7, 0, 6);
+      }
+      .c_img{
+         height: 700px;
+         width : 100%;
+      }
+
+      .c1_img{
+        height: 300px;
+        /* background-image: url(img/pg2.png); */
+        border-radius: 100%;
+        background-color: blueviolet;
+        border: 100%;
+      }
+      .p_h1{
+        text-align: center;
+        text-shadow:50px;
+        border: 2px solid darkblue;
+        background-image: url(img/bg1.jpg);
+        font-style: italic;
+        border-radius: 200%;
+      }
+      .h_5{
+        color:wheat;
+        height: 300px;
+        font-size: 4em;
+        font-weight: bold;
+        border: 100px;
+        text-shadow: 10px 10px black;
+      }
+      #butt{
+        background-color: rgb(120, 197, 244);
+        border-radius: 5px;
+        border: rgb(26, 26, 49);
+        font-size: smaller;
+        padding: 10px;
+      }
+    </style>
 </head>
+
 <body>
-    <!-- Navbar -->
+  <!-- Modal appearence in nav bar ------------------------------------------------------------------->
+  <!-- Registation -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div  class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Registation Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="">
+            <fieldset class="reg">    
+                <label>Username</label><br>
+                <input type="text" name="fname" required><br>
+                <label>Enter the Gmail address</label><br>
+                <input type="email" name="email" required><br>
+                <label>Enter the Password</label><br>
+                <input type="password" name="password" required><br>
+                <label>Re-enter the Password</label><br>
+                <input type="password" name="password" required><br>
+                <br>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </fieldset>
+          </form>
+        </div>  
+      </div>
+    </div>
+  </div>
+  <!-- Login -->
+  <div class="modal fade" id="exampleModa2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="">
+            <fieldset class="reg">     
+                <label>Enter the valid Username</label><br>
+                <input type="text" name="fname" required><br>
+                <label>Enter the valid Password</label><br>
+                <input type="password" name="password" required><br>
+                <br>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </fieldset>
+          </form>
+        </div>  
+      </div>
+    </div>
+  </div>
+  <!-- Logout -->
+  <div class="modal fade" id="exampleModa3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="modal-header">
+            <h5 class="modal-title">Logout</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Are u sure!!!</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+            <button type="button" class="btn btn-primary"data-bs-dismiss="modal">Yes</button>
+          </div>
+        </div>  
+      </div>
+    </div>
+  </div>
+ 
+    <!-- Navbar ------------------------------------------------------------------------------------->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Registation</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+          <button id="reg" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Register
           </button>
+          
+          
           <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Login</a>
-              </li>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModa2">
+                  Login
+                </button>
+                
+              </li><br>
               <li class="nav-item">
-                <a class="nav-link active" href="#">Logout</a>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModa3">
+                  Logout
+                </button>
+                
               </li>
-              <li class="nav-item">
-                <a class="nav-link active " href="#">Others</a>
-              </li>
+              <div class="btn-group">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  Others
+                </button>
+                <!-- Drop down -->
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Subscription</a></li>
+                  <li><a class="dropdown-item" href="#">Offers</a></li>
+                  <li><a class="dropdown-item" href="#">Scratch card</a></li>
+                </ul>
+              </div>
             </ul>
             <form class="d-flex">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -36,32 +164,528 @@
           </div>
         </div>
       </nav>
-    <!-- Images -->
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="/img/Bank.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="/img/Bank.jpg" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="/img/bg3.jpg" class="d-block w-100" alt="...">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+      <h1 class="p_h1">UTHPARSHA</h1>
+      <p class="p_h1">Book stall</p>
+      
+    <!-- Images ------------------------------------------------------------------------------------>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="c_img" src="img/book2.jpeg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="h_5">Books are a uniquely portable magic</h5>
+            <p></p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="c_img" src="img/book5.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5></h5>
+            <p></p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="c_img" src="img/book4.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block">
+            <h5></h5>
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <br>
+    <!-- Alert------------------------------------------------------------------------------------>
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      <strong>Hurry!!!</strong> New Books are avaliable check it fast&#129299;&#129299;&#129299;
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <div class="alert alert-primary alert-dismissible fade show " role="alert">
+      <strong>Subscribe!!!</strong> Subscibe now & get offers &#129321;&#129321;&#129321;
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <br>
+    <!-- Tables ----------------------------------------------------------------------------------->
+    <table class="table" >
+      <thead>
+        <tr class="table-light">
+          <th scope="col">#</th>
+          <th scope="col">Types of Books</th>
+          <th scope="col">Number of Books</th>
+          <th scope="col">Overall Ratings</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table-primary">
+          <th scope="row" >1</th>
+          <td >Historical fiction</td>
+          <td>9,500+</td>
+          <td>98/100</td>
+        </tr>
+        <tr class="table-secondary">
+          <th scope="row" >2</th>
+          <td >Fantasy</td>
+          <td>5,000+</td>
+          <td>95/100</td>
+        </tr>
+        <tr class="table-success">
+          <th scope="row" >3</th>
+          <td >Adventure</td>
+          <td>6,500+</td>
+          <td>85/100</td>
+        </tr>
+        <tr class="table-danger">
+          <th scope="row" >4</th>
+          <td >Thriller</td>
+          <td>3,500+</td>
+          <td>91/100</td>
+        </tr>
+      </tbody>
+    </table>
+    <h1 style="background-color:aquamarine; border-color:black ; padding: 10px; border-width: 10px; border-radius: 10px;">You want to try it!........ Then please go a head &#128071</h1>
+    <!-- Cards ------------------------------------------------------------------------------------>
+    <div class="row row-cols-1 row-cols-md-2 g-4" >
+      <div class="col">
+        <div class="card bg-secondary mb-3">
+          <img class="c1_img" src="img/cards1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Historical Fiction</h5>
+            <p class="card-text">The word “history” and the English word “story” both originate from the Latin historia, meaning a narrative or account of past events. History is itself a collection of thousands of stories about the past, told by many different people.</p>
+            <!-- Button trigger modal in Card-->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#hist">
+              List of Historical Books
+            </button>
+            <button type="button" class="btn btn-primary">Go for it</button>
+            
+            <!--  Modal in card -->
+            <div class="modal fade" id="hist" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">List of Historical fiction Books</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <!-- table inside the card -->
+                    <table class="table" border="3">
+                      <thead >
+                        <tr class="table-dark">
+                          <th scope="col">Historical fiction Books name</th>
+                          <th scope="col"> Author</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      <tr class="table-primary">
+                          <td>History Adventures, World of Characters, Revolutions & Industrialization, 1750 – 1900</td>
+                          <td>Spencer Striker</td> 
+                      </tr>
+                      <tr class="table-primary">
+                          <td>The Guns of August</td>
+                          <td> Barbara W. Tuchman</td> 
+                      </tr>
+                      <tr class="table-primary">
+                          <td>The Liberation Trilogy</td>
+                          <td> Rick Atkinson</td> 
+                      </tr>
+                      <tr class="table-primary">
+                          <td>1776</td>
+                          <td>David McCullough</td> 
+                      </tr>
+                      <tr class="table-primary">
+                          <td>1491</td>
+                          <td>Charles C. Mann</td> 
+                      </tr>
+                      <tr class="table-primary">
+                          <td>The Crusades</td>
+                          <td>Thomas Asbridge</td> 
+                      </tr>
+                      <tr class="table-primary">
+                          <td>Caesar and Christ</td>
+                          <td>Will Durant</td> 
+                      </tr>
+                      <tr class="table-primary">
+                          <td>A History of American People</td>
+                          <td>Paul Johnson</td> 
+                      </tr>
+                      <tr class="table-primary">
+                          <td>Churchill: A Life and the Second World War</td>
+                          <td>Martin Gilbert</td> 
+                      </tr>
+                      <tr class="table-primary">
+                          <td>Guns, Germs, and Steel</td>
+                          <td>Jared Diamond</td> 
+                      </tr>
+                      <tr class="table-primary">
+                          <td>Genghis Khan: The Making Of The Modern World</td>
+                          <td> Jack Weatherford</td> 
+                      </tr>
+                      <tr class="table-primary">
+                          <td> Europe: A History </td>
+                          <td> Norman Davies</td> 
+                      </tr>
+                      <tr class="table-primary">
+                          <td>The Rise And Fall Of The Third Reich</td>
+                          <td> William L. Shirer</td> 
+                      </tr>
+                      <tr class="table-primary">
+                          <td>Postwar: A History of Europe</td>
+                          <td>Tony Judt</td> 
+                      </tr>
+                      <tr class="table-primary">
+                          <td>The Communist Manifesto</td>
+                          <td>Karl Marx</td> 
+                      </tr>
+                      </tbody>
+                    </table> 
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Read it</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card bg-success mb-3">
+          <img class="c1_img" src="img/cards4.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Thriller</h5>
+            <p class="card-text">In terms of literature, a thriller is any story that “thrills” the reader—i.e., gets adrenaline pumping, the heart racing, and the emotions peaked. As you can guess, that makes it fairly broad.</p>
+            <!-- Button trigger modal in card -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#thril">
+              List of Thriller Books
+            </button>
+            <button type="button" class="btn btn-primary">Go for it</button>
+
+            <!-- Modal in card-->
+            <div class="modal fade" id="thril" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">List of Thriller books </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <!-- table inside the card -->
+                    <table class="table" border="3">
+                      <thead>
+                        <tr class="table-dark">
+                          <th scope="col">Thirller Book name</th>
+                          <th scope="col"> Author</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                          <tr class="table-primary">
+                              <td>The Blame Game</td>
+                              <td>Sandie Jones</td> 
+                          </tr>
+                          <tr class="table-primary">
+                              <td>The Axe Woman</td>
+                              <td> Håkan Nesser</td> 
+                          </tr>
+                          <tr class="table-primary">
+                              <td>Daisy Darker</td>
+                              <td>Alice Feeney</td> 
+                          </tr>
+                          <tr class="table-primary">
+                              <td>The Vacation</td>
+                              <td>John Marrs</td> 
+                          </tr>
+                          <tr class="table-primary">
+                              <td>Into the Dark</td>
+                              <td>Fiona Cummins</td> 
+                          </tr>
+                          <tr class="table-primary">
+                              <td>The Murders at Fleat House</td>
+                              <td>Lucinda Riley</td> 
+                          </tr>
+                          <tr class="table-primary">
+                              <td>Out Of Her Depth</td>
+                              <td> Lizzy Barber</td> 
+                          </tr>
+                          <tr class="table-primary">
+                              <td>State of Terror</td>
+                              <td>Hillary Clinton and Louise Penny</td> 
+                          </tr>
+                          <tr class="table-primary">
+                              <td>Magma</td>
+                              <td>Thora Hjörleifsdóttir</td> 
+                          </tr>
+                          <tr class="table-primary">
+                              <td>The Other Side of Night</td>
+                              <td> Adam Hamdy</td> 
+                          </tr>
+                          <tr class="table-primary">
+                              <td>Perfect People</td>
+                              <td>Peter James</td> 
+                          </tr>
+                          <tr class="table-primary">
+                              <td>The Melting</td>
+                              <td>Lize Spit </td> 
+                          </tr>
+                          <tr class="table-primary">
+                              <td>Die Twice</td>
+                              <td>Andrew Grant</td> 
+                          </tr>
+                          <tr class="table-primary">
+                              <td>The Club</td>
+                              <td>Ellery Lloyd</td> 
+                          </tr>
+                          <tr class="table-primary">
+                              <td>The Golden Couple</td>    
+                              <td>Greer Hendricks</td> 
+                          </tr>
+                          </tbody>
+                    </table> 
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Read it</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card bg-warning mb-3"> 
+          <img class="c1_img" src="img/cards2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Fantasy</h5>
+            <p class="card-text">Since fantasy stories specialise in bringing fictional or even invisible characters to life, that is pretty accurate.</p>
+            <!-- Button trigger modal in card -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#fant">
+              List of Fantasy Books
+            </button>
+            <button type="button" class="btn btn-primary">Go for it</button>
+
+            <!-- Modal in card-->
+            <div class="modal fade" id="fant" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">List of Fantasy Books</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <!-- table inside the card -->
+                    <table class="table" border="3">
+                      <thead >
+                        <tr class="table-dark">
+                          <th scope="col">Fantasy books name</th>
+                          <th scope="col"> Author</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      <tr class="table-primary">
+                          <td>A Game of Thrones </td>
+                          <td>George R. R. Martin</td> 
+                      </tr>
+                      <tr class="table-primary">
+                          <td>The Fellowship of the Ring </td>
+                          <td> J. R. R. Tolkien</td> 
+                      </tr>
+                      <tr class="table-primary">
+                          <td>The Lion, the Witch and the Wardrobe</td>
+                          <td>C. S. Lewis</td> 
+                      </tr>
+                      <tr class="table-primary">
+                          <td>The Colour of Magic </td>
+                          <td> Terry Pratchett</td> 
+                      </tr>
+                      <tr class="table-primary">
+                          <td> Assassin’s Apprentice </td>
+                          <td>Robin Hobb</td> 
+                      </tr>
+                      <tr class="table-primary">
+                          <td>The Lies of Locke Lamora </td>
+                          <td>Scott Lynch</td> 
+                      </tr>
+                      <tr class="table-primary">
+                          <td>The Name of the Wind </td>
+                          <td>Patrick Rothfuss</td> 
+                      </tr>
+                      <tr class="table-primary">
+                          <td>Dragonflight </td>
+                          <td>Anne McCaffrey</td> 
+                      </tr>
+                      <tr class="table-primary">
+                          <td>The Eye of the World </td>
+                          <td>Robert Jordan</td> 
+                      </tr>
+                      <tr class="table-primary">
+                          <td> The Blade Itself </td>
+                          <td> Joe Abercrombie</td> 
+                      </tr>
+                      <tr class="table-primary">
+                          <td>The Way of Kings </td>
+                          <td>  Brandon Sanderson</td> 
+                      </tr>
+                      <tr class="table-primary">
+                          <td> Gardens of the Moon </td>
+                          <td>Steven Erikson</td> 
+                      </tr>
+                      <tr class="table-primary">
+                          <td>The Gunslinger </td>
+                          <td>Stephen King</td> 
+                      </tr>
+                      <tr class="table-primary">
+                          <td>A Wizard of Earthsea </td>
+                          <td>Ursula K. Le Guin</td> 
+                      </tr>
+                      <tr class="table-primary">
+                          <td>15. Jonathan Strange and Mr. Norrell </td>
+                          <td>Susanna Clarke</td> 
+                      </tr>
+                      </tbody>
+                    </table> 
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Read it</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card bg-info mb-3">
+          <img class="c1_img" src="img/cards3.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Adventure</h5>
+            <p class="card-text">An adventure story is a genre of literature that features a protagonist going on an adventure of some kind.</p>
+            <!-- Button trigger modal in card-->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#adve">
+              List of Adventure Books
+            </button>
+            <button type="button" class="btn btn-primary">Go for it</button>
+
+            <!-- Modal in card -->
+            <div class="modal fade" id="adve" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">List of Adventure Books</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <!-- table inside the card -->
+                    <table class="table" border="3">
+                      <thead style="">
+                        <tr class="table-dark">
+                          <th scope="col">Adventure Book name </th>
+                          <th scope="col"> Author</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      <tr class="table-primary">
+                          <td>Don Quixote</td>
+                          <td>Miguel de Cervantes</td> 
+                      </tr>
+                      <tr class="table-primary">
+                          <td>The Three Musketeers </td>
+                          <td> Alexandre Dumas</td> 
+                      </tr>
+                      <tr class="table-primary">
+                          <td>Treasure Island </td>
+                          <td>Robert Louis Stevenson</td> 
+                      </tr>
+                      <tr class="table-primary">
+                          <td>King Solomon's Mines </td>
+                          <td>H. Rider Haggard and A. C. Michael</td> 
+                      </tr>
+                      <tr class="table-primary">
+                          <td> Journey to the Center of the Earth </td>
+                          <td>Jules Verne</td> 
+                      </tr>
+                      <tr class="table-primary">
+                          <td>The Count of Monte Cristo </td>
+                          <td>Alexandre Dumas</td> 
+                      </tr>
+                      <tr class="table-primary">
+                          <td>Ivanhoe </td>
+                          <td>Walter Scott</td> 
+                      </tr>
+                      <tr class="table-primary">
+                          <td>Tarzan of the Apes</td>
+                          <td> Edgar Rice Burroughs</td> 
+                      </tr>
+                      <tr class="table-primary">
+                          <td>Heart of Darkness </td>
+                          <td>Joseph Conrad</td> 
+                      </tr>
+                      <tr class="table-primary">
+                          <td> Hatchet </td>
+                          <td>Gary Paulsen</td> 
+                      </tr>
+                      <tr class="table-primary">
+                          <td>Congo</td>
+                          <td>  Michael Crichton</td> 
+                      </tr>
+                      <tr class="table-primary">
+                          <td>The Jungle Book </td>
+                          <td>Rudyard Kipling</td> 
+                      </tr>
+                      <tr class="table-primary">
+                          <td>The Lost World </td>
+                          <td> Sir Arthur Conan Doyle</td> 
+                      </tr>
+                      <tr class="table-primary">
+                          <td>14. 20,000 Leagues Under the Sea </td>
+                          <td> Jules Verne</td> 
+                      </tr>
+                      <tr class="table-primary">
+                          <td>The Cruel Sea </td>
+                          <td> Nicholas Monsarrat</td> 
+                      </tr>
+                      </tbody>
+                    </table> 
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Read it</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <!-- Youtube in website -->
+    <div class="ratio" style="--bs-aspect-ratio: 50%;">
+      <iframe src="https://youtube.com/embed/SKVcQnyEIT8" title="YouTube video" allowfullscreen></iframe>
+    </div>
+    <br>
+
+  <!--Footer ----------------------------------------------->
+  <nav class=" navbar-light bg-secondary mb-3">
+    <div class="container-fluid" style="text-align:left">
+      <a class="navbar-brand" href="#">Contacts </a>
+      <ul>
+        <li>1234567890</li>
+        <li>2314564268</li>
+    </ul>
+    </div>
+  </nav> 
 </body>
 </html>
